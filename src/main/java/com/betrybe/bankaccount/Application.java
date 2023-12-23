@@ -13,9 +13,8 @@ public class Application {
    */
   public static void main(String[] args) {
     AccountNumberFormatter account = new AccountNumberFormatter();
-    Scanner menuScanner = new Scanner(System.in);
 
-    try {
+    try (Scanner menuScanner = new Scanner(System.in)) {
       System.out.println("Informe o número da conta:");
       int literalAccountNumber = menuScanner.nextInt();
 
